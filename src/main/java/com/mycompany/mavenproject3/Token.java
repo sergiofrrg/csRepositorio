@@ -4,7 +4,7 @@
  */
 package com.mycompany.mavenproject3;
 
-import java.util.ArrayList;
+
 
 public class Token {
 
