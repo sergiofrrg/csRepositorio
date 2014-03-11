@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.0.2" timestamp="2014-03-10T13:32:37.788">
+<file name="/Users/SergioFrrg/NetBeansProject/mavenproject3/src/main/java/com/mycompany/mavenproject3/AnalizadorLexico.java">
+<violation beginline="4" endline="4" begincolumn="1" endcolumn="28" rule="UnusedImports" ruleset="Import Statements" package="com.mycompany.mavenproject3" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.Collection'
+</violation>
+<violation beginline="56" endline="56" begincolumn="18" endcolumn="25" rule="UnusedLocalVariable" ruleset="Unused Code" package="com.mycompany.mavenproject3" class="AnalizadorLexico" method="leerSiguienteCaracter" variable="caracter" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'caracter'.
+</violation>
+</file>
+<file name="/Users/SergioFrrg/NetBeansProject/mavenproject3/src/main/java/com/mycompany/mavenproject3/AnalizadorRecursivoPaseo.java">
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="28" rule="UnusedImports" ruleset="Import Statements" package="com.mycompany.mavenproject3" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.Collection'
+</violation>
+<violation beginline="52" endline="52" begincolumn="17" endcolumn="67" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="AnalizadorRecursivoPaseo" method="esCasaGiroAvanzaPintaID" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="116" endline="116" begincolumn="16" endcolumn="55" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="AnalizadorRecursivoPaseo" method="esN" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+</file>
+<file name="/Users/SergioFrrg/NetBeansProject/mavenproject3/src/main/java/com/mycompany/mavenproject3/AnalizadorSintactico.java">
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="28" rule="UnusedImports" ruleset="Import Statements" package="com.mycompany.mavenproject3" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.Collection'
+</violation>
+</file>
+<file name="/Users/SergioFrrg/NetBeansProject/mavenproject3/src/main/java/com/mycompany/mavenproject3/G.java">
+<violation beginline="31" endline="31" begincolumn="16" endcolumn="51" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="G" method="toString" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+</file>
+<file name="/Users/SergioFrrg/NetBeansProject/mavenproject3/src/main/java/com/mycompany/mavenproject3/Interprete.java">
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="28" rule="UnusedImports" ruleset="Import Statements" package="com.mycompany.mavenproject3" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.Collection'
+</violation>
+<violation beginline="67" endline="67" begincolumn="17" endcolumn="83" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esCasaGiroAvanzaPintaID" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="149" endline="149" begincolumn="16" endcolumn="55" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esN" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="191" endline="191" begincolumn="17" endcolumn="28" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esSR" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="195" endline="195" begincolumn="17" endcolumn="52" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esS" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="199" endline="199" begincolumn="17" endcolumn="54" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esR" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="203" endline="203" begincolumn="17" endcolumn="52" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esM" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="207" endline="207" begincolumn="17" endcolumn="54" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esD" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="211" endline="211" begincolumn="17" endcolumn="28" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esMD" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="215" endline="215" begincolumn="17" endcolumn="56" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esPA" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="219" endline="219" begincolumn="17" endcolumn="56" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esPC" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="223" endline="223" begincolumn="17" endcolumn="51" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esSI" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="227" endline="227" begincolumn="17" endcolumn="53" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esIR" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="231" endline="231" begincolumn="17" endcolumn="54" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esMayor" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="235" endline="235" begincolumn="17" endcolumn="54" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esMenor" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="239" endline="239" begincolumn="17" endcolumn="54" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esIgual" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="243" endline="243" begincolumn="17" endcolumn="57" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Interprete" method="esDistinto" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+</file>
+<file name="/Users/SergioFrrg/NetBeansProject/mavenproject3/src/main/java/com/mycompany/mavenproject3/Lienzo.java">
+<violation beginline="23" endline="23" begincolumn="35" endcolumn="60" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="com.mycompany.mavenproject3" class="Lienzo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'java.util.ArrayList' due to existing import 'java.util.*'
+</violation>
+<violation beginline="23" endline="23" begincolumn="5" endcolumn="25" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="com.mycompany.mavenproject3" class="Lienzo" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'java.util.List' due to existing import 'java.util.*'
+</violation>
+<violation beginline="34" endline="34" begincolumn="22" endcolumn="42" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="com.mycompany.mavenproject3" class="Lienzo" method="addI" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'java.util.List' due to existing import 'java.util.*'
+</violation>
+</file>
+<file name="/Users/SergioFrrg/NetBeansProject/mavenproject3/src/main/java/com/mycompany/mavenproject3/P.java">
+<violation beginline="36" endline="36" begincolumn="17" endcolumn="44" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="P" method="toString" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+</file>
+<file name="/Users/SergioFrrg/NetBeansProject/mavenproject3/src/main/java/com/mycompany/mavenproject3/PracticaOblPL.java">
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="28" rule="UnusedImports" ruleset="Import Statements" package="com.mycompany.mavenproject3" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.Collection'
+</violation>
+</file>
+<file name="/Users/SergioFrrg/NetBeansProject/mavenproject3/src/main/java/com/mycompany/mavenproject3/Token.java">
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="27" rule="UnusedImports" ruleset="Import Statements" package="com.mycompany.mavenproject3" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.ArrayList'
+</violation>
+<violation beginline="40" endline="40" begincolumn="21" endcolumn="34" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Token" method="toString" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="42" endline="42" begincolumn="21" endcolumn="60" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Token" method="toString" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="46" endline="46" begincolumn="16" endcolumn="42" rule="UselessParentheses" ruleset="Unnecessary" package="com.mycompany.mavenproject3" class="Token" method="compararLexema" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unnecessary.html#UselessParentheses" priority="4">
+Useless parentheses.
+</violation>
+</file>
+<file name="/Users/SergioFrrg/NetBeansProject/mavenproject3/src/main/java/com/mycompany/mavenproject3/Ventana.java">
+<violation beginline="19" endline="19" begincolumn="21" endcolumn="30" rule="UnusedLocalVariable" ruleset="Unused Code" package="com.mycompany.mavenproject3" class="Ventana" variable="scrollPane" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.0.2/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'scrollPane'.
+</violation>
+</file>
+</pmd>
