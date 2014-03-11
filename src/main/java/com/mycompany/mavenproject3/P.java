@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class P {
+
     private VN antecedente;
     private Collection<V> consecuente;
 
@@ -22,17 +23,17 @@ public class P {
     public void setConsecuente(Collection<V> consecuente) {
         this.consecuente = consecuente;
     }
-    
-    public P (VN antecedente){
+
+    public P(VN antecedente) {
         this.antecedente = antecedente;
         this.consecuente = new ArrayList<V>();
     }
-    
-    public void addConsecuente(V consecuente){
+
+    public void addConsecuente(V consecuente) {
         this.consecuente.add(consecuente);
     }
-    
-    public String toString(){
-        return (antecedente+"->"+consecuente);
+
+    public String toString() {
+        return (antecedente + "->" + consecuente);
     }
 }

@@ -1,9 +1,11 @@
 package com.mycompany.mavenproject3;
 
 public class V {
+
     private String v;
-    V(String v){
-        this.v=v;
+
+    V(String v) {
+        this.v = v;
     }
 
     public String getV() {
@@ -13,5 +15,4 @@ public class V {
     public void setV(String v) {
         this.v = v;
     }
-    
 }

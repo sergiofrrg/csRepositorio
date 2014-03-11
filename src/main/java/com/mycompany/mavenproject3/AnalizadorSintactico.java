@@ -4,7 +4,6 @@
  */
 package com.mycompany.mavenproject3;
 
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -12,11 +11,12 @@ import java.util.List;
  * @author SergioFrrg
  */
 public abstract class AnalizadorSintactico {
+
     G g;
 
     public AnalizadorSintactico(G g) {
         this.g = g;
     }
-    
-    public abstract boolean analiza(List <Token> vt); //COLLECTION
+
+    public abstract boolean analiza(List<Token> vt); //COLLECTION
 }

@@ -8,8 +8,9 @@ import java.util.Set;
 import java.util.regex.Pattern;
 
 public class AnalizadorLexico {
+
     final int LONG = 16;
-    int p_observacion=-1;
+    int p_observacion = -1;
     char buffer[] = new char[LONG];
     int estado = 0;
     int valor = 0;
@@ -22,10 +23,10 @@ public class AnalizadorLexico {
     protected final static String L = "[a-zA-ZñÑ]*|\\_";
     protected final static String N = "\\d*";
     protected final static String DEL = "\\s|\t";
-    protected final static String DEL1 = DEL+"|\\{|\\=|\\+|\\;|\\)|\\<|\\-|\\*|\\/|\\>";
-    protected final static String DEL2 = DEL+"|\\(|[a-zA-ZñÑ]|\\d";
+    protected final static String DEL1 = DEL + "|\\{|\\=|\\+|\\;|\\)|\\<|\\-|\\*|\\/|\\>";
+    protected final static String DEL2 = DEL + "|\\(|[a-zA-ZñÑ]|\\d";
 
-    public AnalizadorLexico(){
+    public AnalizadorLexico() {
         this.listaPR.add("avanza");
         this.listaPR.add("pinta");
         this.listaPR.add("giro");
@@ -35,7 +36,8 @@ public class AnalizadorLexico {
         this.listaPR.add("si");
         this.listaPR.add("entonces");
     }
-    public char leerSiguienteCaracter(String entrada){
+
+    public char leerSiguienteCaracter(String entrada) {
 //        if (p_observacion == LONG / 2 - 1) {
 //            this.recargaBuffer(2, entrada);
 //            p_observacion++;
@@ -52,100 +54,95 @@ public class AnalizadorLexico {
 //            return this.buffer[p_observacion];
 //        }
         this.p_observacion++;
-        try{
+        try {
             char caracter = entrada.charAt(this.p_observacion);
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             return ' ';
         }
         return entrada.charAt(this.p_observacion);
     }
-    
-    public boolean esDelTipo(String c, String constante){
+
+    public boolean esDelTipo(String c, String constante) {
         return Pattern.compile(constante).matcher(c).matches();
     }
-    public void retrocesoPuntero(){
+
+    public void retrocesoPuntero() {
         this.p_observacion--;
         this.posEntrada--;
     }
-    
-    public void recargaBuffer(int mitad, String entrada){
+
+    public void recargaBuffer(int mitad, String entrada) {
         int i;
         int tope;
         int aux;
-        if (mitad==1){
+        if (mitad == 1) {
             i = 0;
-            tope = this.LONG/2-1;
+            tope = this.LONG / 2 - 1;
             aux = this.posEntrada;
+        } else {
+            i = this.LONG / 2;
+            tope = this.LONG - 1;
+            aux = this.posEntrada + 1;
         }
-        else{
-            i=this.LONG/2;
-            tope = this.LONG-1;
-            aux = this.posEntrada+1;
-        }
-        while (i<=tope && aux<entrada.length()){
+        while (i <= tope && aux < entrada.length()) {
             this.buffer[i] = entrada.charAt(aux);
             aux++;
             i++;
-        }      
+        }
     }
-    
-    public double convierteNumero (){
-    double i = 0;
+
+    public double convierteNumero() {
+        double i = 0;
         try {
             i = Double.parseDouble(cadena);
-        }
-        catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             System.out.println("Error al parsear numero");
         }
         return i;
     }
-    
-    public void concatenarCaracter (char c){
-        this.cadena = this.cadena+c;
+
+    public void concatenarCaracter(char c) {
+        this.cadena = this.cadena + c;
     }
-    
-    public String daLexema(){
+
+    public String daLexema() {
         return this.cadena;
     }
-    
-    public void iniLexema(){
+
+    public void iniLexema() {
         this.cadena = "";
         this.caracter = ' ';
     }
-    
+
     private void diferPRId(String lexema) {
-        tokens.add(listaPR.contains(lexema) ? new Token("TK_"+ lexema.toUpperCase()) : new Token("TK_ID", lexema));
+        tokens.add(listaPR.contains(lexema) ? new Token("TK_" + lexema.toUpperCase()) : new Token("TK_ID", lexema));
     }
-    
-    public void daToken (Token token){
+
+    public void daToken(Token token) {
         tokens.add(token);
     }
-    
-    public List<Token> analizar(String entrada){       
+
+    public List<Token> analizar(String entrada) {
         estado = 0;
         valor = 0;
         digito = 0;
         //this.recargaBuffer(1, entrada);
         String aux;
-        while (this.p_observacion<entrada.length()){
-            switch (estado){
+        while (this.p_observacion < entrada.length()) {
+            switch (estado) {
                 case 0:
                     this.iniLexema();
                     digito = 0;
                     valor = 0;
                     caracter = leerSiguienteCaracter(entrada);
-                    aux = ""+caracter;
-                    if (this.esDelTipo(aux, DEL)){
+                    aux = "" + caracter;
+                    if (this.esDelTipo(aux, DEL)) {
                         estado = 0;
-                    }
-                    else if(this.esDelTipo(aux, L)){
+                    } else if (this.esDelTipo(aux, L)) {
                         estado = 1;
-                    }
-                    else if(this.esDelTipo(aux, N)){
+                    } else if (this.esDelTipo(aux, N)) {
                         estado = 16;
-                    }
-                    else{
+                    } else {
                         switch (caracter) {
                             case '{':
                                 estado = 5;
@@ -169,7 +166,7 @@ public class AnalizadorLexico {
                                 estado = 8;
                                 break;
                             case '-':
-                                estado= 19;
+                                estado = 19;
                                 break;
                             case '/':
                                 estado = 20;
@@ -192,18 +189,16 @@ public class AnalizadorLexico {
                 case 1:
                     concatenarCaracter(caracter);
                     caracter = this.leerSiguienteCaracter(entrada);
-                    aux = ""+caracter;
-                    if (this.esDelTipo(aux, DEL1)){
+                    aux = "" + caracter;
+                    if (this.esDelTipo(aux, DEL1)) {
                         estado = 2;
-                    }
-                    else if (this.esDelTipo(aux, N)){
+                    } else if (this.esDelTipo(aux, N)) {
                         estado = 3;
-                    }
-                    else if (this.esDelTipo(aux, L)){
+                    } else if (this.esDelTipo(aux, L)) {
                         estado = 1;
-                    }
-                    else
+                    } else {
                         estado = 2;
+                    }
                     break;
                 case 2:
                     this.retrocesoPuntero();
@@ -213,14 +208,12 @@ public class AnalizadorLexico {
                 case 3:
                     this.concatenarCaracter(caracter);
                     caracter = this.leerSiguienteCaracter(entrada);
-                    aux = ""+caracter;
-                    if (this.esDelTipo(aux, DEL1)){
+                    aux = "" + caracter;
+                    if (this.esDelTipo(aux, DEL1)) {
                         estado = 4;
-                    }
-                    else if (this.esDelTipo(aux, N)){
+                    } else if (this.esDelTipo(aux, N)) {
                         estado = 3;
-                    }
-                    else if (this.esDelTipo(aux, L)){
+                    } else if (this.esDelTipo(aux, L)) {
                         estado = 3;
                     }
                     break;
@@ -255,18 +248,17 @@ public class AnalizadorLexico {
                     break;
                 case 7:
                     caracter = leerSiguienteCaracter(entrada);
-                    aux = ""+caracter;
-                    if (this.esDelTipo(aux, DEL2)){
+                    aux = "" + caracter;
+                    if (this.esDelTipo(aux, DEL2)) {
                         estado = 11;
-                    }
-                    else if (aux.contains("=")){
+                    } else if (aux.contains("=")) {
                         estado = 102;
                     }
                     break;
                 case 8:
                     caracter = leerSiguienteCaracter(entrada);
-                    aux = ""+caracter;
-                    if (this.esDelTipo(aux, DEL2)){
+                    aux = "" + caracter;
+                    if (this.esDelTipo(aux, DEL2)) {
                         estado = 12;
                     }
                     break;
@@ -293,19 +285,18 @@ public class AnalizadorLexico {
                     break;
                 case 10:
                     caracter = leerSiguienteCaracter(entrada);
-                    aux = ""+caracter;
-                    if (this.esDelTipo(aux, DEL2)){
+                    aux = "" + caracter;
+                    if (this.esDelTipo(aux, DEL2)) {
                         estado = 13;
-                    }
-                    else if(aux.contains(">")){
+                    } else if (aux.contains(">")) {
                         estado = 122;
                     }
                     break;
                 case 101:
                     caracter = leerSiguienteCaracter(entrada);
-                    aux = ""+caracter;
-                    if (this.esDelTipo(aux, DEL2)){
-                        estado =131;
+                    aux = "" + caracter;
+                    if (this.esDelTipo(aux, DEL2)) {
+                        estado = 131;
                     }
                     break;
                 case 11:
@@ -364,14 +355,12 @@ public class AnalizadorLexico {
                     this.concatenarCaracter(caracter);
                     this.convierteNumero();
                     caracter = this.leerSiguienteCaracter(entrada);
-                    aux = ""+caracter;
-                    if (this.esDelTipo(aux, N)){
+                    aux = "" + caracter;
+                    if (this.esDelTipo(aux, N)) {
                         estado = 16;
-                    }
-                    else if(this.esDelTipo(aux, DEL1)){
+                    } else if (this.esDelTipo(aux, DEL1)) {
                         estado = 17;
-                    }
-                    else if (aux.contains(".")){
+                    } else if (aux.contains(".")) {
                         estado = 161;
                     }
                     break;
@@ -379,22 +368,20 @@ public class AnalizadorLexico {
                     this.concatenarCaracter(caracter);
                     this.convierteNumero();
                     caracter = this.leerSiguienteCaracter(entrada);
-                    aux = ""+caracter;
-                    if (this.esDelTipo(aux, N)){
+                    aux = "" + caracter;
+                    if (this.esDelTipo(aux, N)) {
                         estado = 162;
-                    }
-                    else if(this.esDelTipo(aux, DEL1)){
+                    } else if (this.esDelTipo(aux, DEL1)) {
                         estado = 17;
                     }
                     break;
                 case 161:
                     this.concatenarCaracter(caracter);
                     caracter = this.leerSiguienteCaracter(entrada);
-                    aux = ""+caracter;
-                    if (this.esDelTipo(aux, N)){
+                    aux = "" + caracter;
+                    if (this.esDelTipo(aux, N)) {
                         estado = 162;
-                    }
-                    else if(this.esDelTipo(aux, DEL1)){
+                    } else if (this.esDelTipo(aux, DEL1)) {
                         estado = 17;
                     }
                     break;

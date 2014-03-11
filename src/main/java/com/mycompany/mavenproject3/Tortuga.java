@@ -3,9 +3,10 @@
  * and open the template in the editor.
  */
 package com.mycompany.mavenproject3;
+
 /**
  * Write a description of class Tortuga here.
- * 
+ *
  * @author Francisco Dominguez
  * @date 14/03/2013
  * @version 20130314
@@ -13,8 +14,8 @@ package com.mycompany.mavenproject3;
 import javax.swing.*;
 import java.awt.*;
 
-public class Tortuga
-{
+public class Tortuga {
+
     private Point pos;
     private double angle;
     private boolean penDown;
@@ -27,50 +28,60 @@ public class Tortuga
         return g;
     }
 
-    
-    public Tortuga(Graphics g)
-    {
-        this.g=g;
-        pos=new Point(0,0);
-        angle=0;
-        penDown=true;
+    public Tortuga(Graphics g) {
+        this.g = g;
+        pos = new Point(0, 0);
+        angle = 0;
+        penDown = true;
     }
-    private double a2r(double a){
-        return Math.PI*a/180;
+
+    private double a2r(double a) {
+        return Math.PI * a / 180;
     }
-    public void home(){
-        pos=new Point(0,0);
+
+    public void home() {
+        pos = new Point(0, 0);
     }
-    public void pen(boolean b){
-        penDown=b;
+
+    public void pen(boolean b) {
+        penDown = b;
     }
-    public void penDown(){
+
+    public void penDown() {
         pen(true);
     }
-    public void penUp(){
-        pen(false); 
+
+    public void penUp() {
+        pen(false);
     }
-    public void move(double dist){
-        int despX=(int)(pos.getX()+Math.cos(a2r(angle))*dist);
-        int despY=(int)(pos.getY()+Math.sin(a2r(angle))*dist);
-        Point newPos=new Point(despX,despY);
-        if(penDown)
-           g.drawLine(pos.x,pos.y,newPos.x,newPos.y);
-        pos=newPos;
+
+    public void move(double dist) {
+        int despX = (int) (pos.getX() + Math.cos(a2r(angle)) * dist);
+        int despY = (int) (pos.getY() + Math.sin(a2r(angle)) * dist);
+        Point newPos = new Point(despX, despY);
+        if (penDown) {
+            g.drawLine(pos.x, pos.y, newPos.x, newPos.y);
+        }
+        pos = newPos;
     }
-    public void forward(double dist){
+
+    public void forward(double dist) {
         move(dist);
     }
-    public void backward(double dist){
+
+    public void backward(double dist) {
         move(-dist);
     }
-    public void turn(double a){
-        angle+=a;
+
+    public void turn(double a) {
+        angle += a;
     }
-    public void turnRight(double a){
+
+    public void turnRight(double a) {
         turn(a);
     }
-    public void turnLeft(double a){
+
+    public void turnLeft(double a) {
         turn(-a);
     }
 }

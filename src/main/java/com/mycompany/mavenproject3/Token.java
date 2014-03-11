@@ -6,16 +6,17 @@ package com.mycompany.mavenproject3;
 
 import java.util.ArrayList;
 
-public class Token{
+public class Token {
+
     String lexema;
     Object contenido;
-    
-    public Token (String a, Object b){
+
+    public Token(String a, Object b) {
         lexema = a;
         contenido = b;
     }
-    
-    public Token (String a){
+
+    public Token(String a) {
         lexema = a;
     }
 
@@ -34,15 +35,16 @@ public class Token{
     public void setContenido(Object contenido) {
         this.contenido = contenido;
     }
-    
-    public String toString(){
-        if (contenido == null)
-            return ("<"+lexema+">");
-        else
-            return ("<"+lexema+", "+contenido.toString()+">");
+
+    public String toString() {
+        if (contenido == null) {
+            return ("<" + lexema + ">");
+        } else {
+            return ("<" + lexema + ", " + contenido.toString() + ">");
+        }
     }
 
     public boolean compararLexema(String s) {
-        return(this.lexema.compareTo(s)==0);
+        return (this.lexema.compareTo(s) == 0);
     }
 }
