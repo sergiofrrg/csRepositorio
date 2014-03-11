@@ -4,7 +4,7 @@
  */
 package com.mycompany.mavenproject3;
 
-import java.util.Collection;
+
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -15,13 +15,15 @@ import java.util.logging.Logger;
  *
  * @author SergioFrrg
  */
-public class Interprete{
+public class Interprete {
+    
+    /** Javadoc document **/
 
     Token tokenActual;
-    int posicion=0;
+    int posicion = 0;
     List<Token> col;
     Tortuga t;
-    Map<String, Double> variables=new TreeMap<String, Double>();;
+    Map<String, Double> variables = new TreeMap<String, Double>();;
     
     public Interprete (Tortuga t){
         this.t = t;
